@@ -20,7 +20,7 @@ Now it's time to use `fetch()` to make some GET requests and do something semi-i
 2. Only show the contestant one question per difficulty in a given category.
 3. Provide a win condition once all questions in all categories are exhausted.
 
-### Submission Guidelines:
+# Submission Guidelines
 1. Fork this repo and clone it to your machine.
 2. Enable GitHub Pages for your repo.
 3. Add your code, per the instructions above.
