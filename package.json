@@ -1,0 +1,23 @@
+{
+  "name": "frontend-fetch-jeopardy",
+  "version": "1.0.0",
+  "description": "Now it's time to use `fetch()` to make some GET requests and do something semi-intelligent with the responses.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikaiyl/frontend-fetch-jeopardy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikaiyl/frontend-fetch-jeopardy/issues"
+  },
+  "homepage": "https://github.com/mikaiyl/frontend-fetch-jeopardy#readme",
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0"
+  }
+}

@@ -1,0 +1,32 @@
+#main {
+    background-color: grey;
+    width: 480px;
+    padding: 10px;
+}
+
+#head {
+    background-color: black;
+    position: relative;
+    top: 0;
+    margin-bottom: 20px;
+}
+
+#game {
+    position: relative;
+    background-color: black;
+}
+
+#foot {
+    position: relative;
+}
+
+.cell {
+    color: gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#userInput {
+    margin: 10px;
+}
