@@ -13,8 +13,9 @@ Cell.prototype = {
     *  grid to be made up of.
     * */
 
-    getHTML: function () {
+    getHTML: function ( value ) {
         if ( this.html ) return this.html
+        if ( value ) this.value = value
 
         // html attributes data etc
         this.html = document.createElement( 'div' )
@@ -35,14 +36,37 @@ Cell.prototype = {
     setValue: function ( value ) {
         this.value = value
         this.html.textContent = this.value
+        return this
+    },
+
+    getData: function () {
+        return this.data
+    },
+
+    setData: function ( data ) {
+        this.data = data
+        return this
     },
 
     setClass: function ( newClass ) {
         this.html.classList.add( newClass )
+        return this
     },
 
     removeClass: function ( oldClass ) {
         this.html.classList.remove( oldClass )
+        return this
+    },
+
+    handleEvent: function ( event ) {
+        console.log(event)
+        if ( event.type === 'click' && this.data ) {
+            debugger
+            if ( !this.questionAsked ) {
+                this.questionAsked = true
+                this.setValue( this.getData() )
+            }
+        }
     },
 
 }

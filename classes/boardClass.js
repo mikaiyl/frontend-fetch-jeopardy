@@ -28,11 +28,36 @@ Board.prototype = {
     setup: function () {
         // one array to rule them all
         this.board = new Array()
-        for ( let rowIndex = 0; rowIndex < this.height; rowIndex += 1 ) {
+        for ( let rowindex = 0; rowindex < this.height; rowindex += 1 ) {
             for ( let index = 0; index < this.width; index += 1 ) {
-                let cell = new Cell( rowIndex, index, '$' + ( rowIndex + 1 ) * 200 )
+                let cell = new Cell( rowindex, index, '$' + ( rowindex + 1 ) * 200 )
+                cell.getHTML().addEventListener( 'click', cell.handleEvent.bind(cell) )
                 this.board.push( cell )
                 this.html.appendChild( this.board[ this.board.length - 1 ].getHTML() )
+            }
+        }
+        // return this for chaining
+        return this
+    },
+
+    update: function ( cellValues ) {
+        // one array to rule them all
+        for ( let rowindex = 0; rowindex < this.height; rowindex += 1 ) {
+            for ( let index = 0; index < this.width; index += 1 ) {
+                    debugger
+                    this.findCell( rowindex, index ).setData( cellValues[ index ][ rowindex ].question )
+            }
+        }
+        // return this for chaining
+        return this
+    },
+
+
+    forEach: function ( func ) {
+        // one array to rule them all
+        for ( let rowindex = 0; rowindex < this.height; rowindex += 1 ) {
+            for ( let index = 0; index < this.width; index += 1 ) {
+                func( this.findCell( rowindex, index ) )
             }
         }
         // return this for chaining
@@ -63,10 +88,10 @@ Board.prototype = {
     * */
 
     findCell: function ( row, col ) {
-        let r = row * this.width
-
+        let r = Number( row ) * this.width
+        debugger
         if ( this.board ) {
-            return this.board[ r + col ]
+            return this.board[ r + Number( col ) ]
         } else {
             return 'index not found'
         }
