@@ -26,8 +26,8 @@ Cell.prototype = {
         this.html.style.gridColumn = this.col + 1
         this.html.style.backgroundColor = 'blue'
         this.html.style.margin = '5px'
-        this.html.style.height = '50px'
-        this.html.style.width = '70px'
+        this.html.style.height = '100px'
+        this.html.style.width = '140px'
         this.html.classList.add( 'cell' )
 
         return this.html

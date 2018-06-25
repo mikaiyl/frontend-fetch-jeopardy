@@ -11,7 +11,7 @@ function Board ( height, width, parentElement ) {
     this.html = document.createElement( 'div' )
     this.html.classList.add( 'board' )
     this.html.style.display = 'grid'
-    this.html.style.width = '480px'
+    this.html.style.width = '920px'
 
     this.parentElement.appendChild( this.html )
 }
@@ -44,7 +44,6 @@ Board.prototype = {
         // one array to rule them all
         for ( let rowindex = 0; rowindex < this.height; rowindex += 1 ) {
             for ( let index = 0; index < this.width; index += 1 ) {
-                    debugger
                     this.findCell( rowindex, index ).setData( cellValues[ index ][ rowindex ].question )
             }
         }

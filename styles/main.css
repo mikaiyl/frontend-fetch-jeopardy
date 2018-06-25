@@ -1,6 +1,6 @@
 #main {
     background-color: grey;
-    width: 480px;
+    width: 920px;
     padding: 10px;
 }
 
@@ -21,6 +21,7 @@
 }
 
 .cell {
+    overflow: scroll;
     color: gold;
     display: flex;
     align-items: center;
